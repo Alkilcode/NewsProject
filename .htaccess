@@ -1,0 +1,8 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+        # от лица index.php можем создавать новые файлы
+RewriteCond %{REQUEST_FILENAME} !-d
+        # cоздавать доп директории
+RewriteRule ^(.*)$ index.php
