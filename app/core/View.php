@@ -25,5 +25,11 @@ class View
         } else {
             echo "Вид не найден";
         }
+
+    }
+
+    public function redirect ($url) {
+        header("Location:". $url);
+        exit();
     }
 }
